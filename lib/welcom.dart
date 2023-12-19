@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-class Homepage extends StatelessWidget {
-  const Homepage({super.key});
+class Welcome extends StatelessWidget {
+  const Welcome({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +13,11 @@ class Homepage extends StatelessWidget {
         child:
         Column(
           children: [
-            Image(image: AssetImage('assets/images/logo2.png')),
-            Padding(padding: const EdgeInsets.only(top: 75.0),
+            Padding(
+              padding: const EdgeInsets.only(top: 150),
+              child: Image(image: AssetImage('assets/images/logo2.png')),
+            ),
+            Padding(padding: const EdgeInsets.only(top: 200),
             child: SizedBox(
               width:250,
               child: ElevatedButton(

@@ -1,8 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:untitled4/food.dart';
+import 'package:untitled4/forgotpass.dart';
+import 'package:untitled4/homepage.dart';
 import 'package:untitled4/login.dart';
+import 'package:untitled4/medicine.dart';
+import 'package:untitled4/medicineallitems.dart';
+import 'package:untitled4/otpvery.dart';
+import 'package:untitled4/passchanged.dart';
+import 'package:untitled4/profile.dart';
+import 'package:untitled4/register.dart';
+import 'package:untitled4/resetpass.dart';
+import 'package:untitled4/settings.dart';
 import 'package:untitled4/welcom.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
@@ -34,7 +52,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: Loginpage(),
+      home: Medicineallitems(),
     );
   }
 }
